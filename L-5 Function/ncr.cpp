@@ -17,5 +17,5 @@ int ncr(int n , int r){
 int main (){
     int n=8 , r=2;
     cout << ncr(n,r) << endl;
-    return 0;
+    return 0; 
 }
