@@ -10,7 +10,7 @@ int main (){
 
     switch(1){
         case 1:
-        if(remaining>=200){
+        if(remaining>=2000){
             noteCount=remaining/2000;
             remaining%=2000;
             cout << "2000 x" << noteCount << endl;
