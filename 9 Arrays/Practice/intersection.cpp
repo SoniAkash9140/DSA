@@ -13,7 +13,7 @@ int main(){
     for (int i = 0; i < n; i++) {
         cin >> arr1[i];
     }
-
+ 
     cout << "Enter " << m << " elements for arr2: ";
     for (int i = 0; i < m; i++) {
         cin >> arr2[i];
