@@ -1,3 +1,5 @@
+Vector- Dynamic 
+
 Vector Syntax-
         vector<object_type> variable_name;
         Example:
