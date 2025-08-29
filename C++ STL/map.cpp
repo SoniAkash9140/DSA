@@ -3,7 +3,7 @@
 using namespace std;
 
 void explainMap() {
-    // map-> unique key and values in sorted order. It contains {key,values}
+    // Use a single map declaration
     map<int, int> mpp;
 
     // Adding key-value pairs to the map
