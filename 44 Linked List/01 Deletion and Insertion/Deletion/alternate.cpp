@@ -42,8 +42,33 @@ public:
             Node* toDelete = current->next;
             current->next = toDelete->next;
             delete toDelete;
-
             current = current->next;
+        }
+    }
+
+    void reversePrint(Node* head){
+        //base case
+        if(head==NULL){
+            return;
+        }
+
+        reversePrint(head->next);
+        cout<<head->val<<" ";
+    }
+
+    // delete duplicate nodes from sorted linked list
+    void deleteDuplicateNode(Node* &head) {
+        Node* current = head;
+
+        while (current != NULL && current->next != NULL) {
+            if (current->val == current->next->val) {
+                Node* temp = current->next;
+                current->next = current->next->next;
+                delete temp;
+            } 
+            else {
+                current = current->next;
+            }
         }
     }
 
@@ -62,17 +87,19 @@ int main() {
 
     ll.insertAtTail(1);
     ll.insertAtTail(2);
+    ll.insertAtTail(2);
     ll.insertAtTail(3);
-    ll.insertAtTail(4);
-    ll.insertAtTail(5);
+    ll.insertAtTail(3);
 
-    cout << "Before deletion: ";
+    // cout << "Before duplicate deletion: ";
+    // ll.display();
+
+    // ll.deleteDuplicateNode(ll.head);
+
+    // cout << "After duplicate deletion: ";
+    // ll.display();
     ll.display();
-
-    ll.deleteAlternate();
-
-    cout << "After deletion: ";
-    ll.display();
+    ll.reversePrint(ll.head);
 
     return 0;
 }
